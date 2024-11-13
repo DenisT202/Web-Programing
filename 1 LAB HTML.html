@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title> C language </title>
+<h2>
+  BACKGROUND
+</h2>
+I learned to program in C as a second programming language at university, I was able to create projects 
+like a game in C which helped me to better understand how this programming language works.
+<h2>
+  Features
+</h2>
+We can choose the C language for many reasons:
+<ul>
+<li>It does not require a lot of resources</li>
+<li>Data structure the unions of the C language are complex</li>
+<li>Has access to the memory by using pointers</li>
+</ul>
+<h2> 
+  Comparison
+</h2>
+<table style='width: 100%' align='center' border='2'>
+  <tbody>
+      <tr>
+          <th>Pros</th>
+          <th>Cons</th>
+      </tr>
+      <tr>
+          <td>Highly portable and interoperable</td>
+          <td>No checks for runtime</td>
+      </tr>
+      <tr>
+          <td>Rich set of built-in and user-defined functions</td>
+          <td>No provision for having a namespace</td>
+      </tr>
+      <tr>
+          <td>Extendable with library functions</td>
+          <td>No concept of a constructor and destructor</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2>
+Include Diagram Section
+</h2>
+
+ 		<div>
+ <img src="Cimagen.png" alt=" C uses " width="550" height="450">
+ 		</div>
+
+     <pre>
+
+      class flappybird{
+	
+        private:
+          dato ave[1];
+          int t1[3], t2[3];
+          int x1[3]={26,52,78};
+          int d[3]={0,0,0};
+          float y=15.0f, vy=0.0f;
+          
+          public:
+            void info(){
+              for(int t=0;t<4;t++){
+                int q=0;
+                int y;
+                for(int i=0;i<2;i++){
+                  y=2-i;
+                  for(int j=0;j<7;j++){
+                    if(bird[t][i][j]!=' '){
+                      ave[t].pos[q]={j,y};
+                      ave[t].d[q]=bird[t][i][j];
+                      q++;
+                    }
+                    
+                  }
+                }
+              }
+            }
+            
+            void player(char plano [HEIGHT/dH][WIDTH/dW+1]){
+              for(int i=0; i<10;i++){
+                draw(plano,5+ave[0].pos[i].x,y+ave[0].pos[i].y,ave[0].d[i]);
+              }
+            }
+            void pipelinerand(int pos){
+              t1[pos]=rand()%19+3;
+              t2[pos]=HEIGHT/dH-1-(t1[pos]+5);
+            }
+            void pipeline(char plano [HEIGHT/dH][WIDTH/dW+1], int pos){
+                
+              for(int i=0;i<t1[pos];i++){
+                draw(plano,x1[pos]-1,0+i,'*');
+                draw(plano,x1[pos]  ,0+i,'*');
+                draw(plano,x1[pos]+1,0+i,'*');
+                
+              }
+              for(int j=0;j<t2[pos];j++){
+                draw(plano,x1[pos]-1,HEIGHT/dH-1-j,'*');
+                draw(plano,x1[pos]  ,HEIGHT/dH-1-j,'*');
+                draw(plano,x1[pos]+1,HEIGHT/dH-1-j,'*');
+              }
+            }
+            void displacement(int pos){
+              d[pos]++;
+              if(d[pos] == 100 ){
+                x1[pos]--;
+                d[pos]=0;
+              }
+              if(x1[pos] <= 0){
+                x1[pos]= WIDTH/dW;
+                pipelinerand(pos);
+              }
+            }
+            void update(){
+              vy-=0.008;
+              y+=0.0415*vy;
+            }
+            void movement(){
+              if(vy <= 0)
+                vy=1.75;
+            }
+        };
+      
+
+     </pre> 
+<h2>
+  Conclusion
+</h2>
+C programming is a versatile and powerful language with a rich history and enduring popularity. 
+<h2>
+  Links
+</h2>
+
+<ol>
+  <li> Pros C   <a href="https://www.crehana.com/blog/transformacion-digital/ventajas-desventajas-lenguaje/">Advantage</a>
+  
+  <li> Cons C   <a href="https://desarrolloweb.com/faq/sobre-mostrar-codigo-fuente">Disadvantage</a>
+  
+  <li>Conclusion C   <a href="https://codeahoy.com">Resume</a>
+  
+</ol>
+
+<h2>
+<p></p>
+Feedback
+</h2>
+
+<form action="/action_page.php">
+  <label for="fname"><b>First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  
+  <p> Message:<p/>
+  <textarea rows="5" cols="40"></textarea>
+  
+  </label>
+  <br>
+  <br>
+  
+ <input type="submit" value="Submit">
+</form>
+</address>
+</body>
+<html/>
