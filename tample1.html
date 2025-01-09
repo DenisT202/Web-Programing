@@ -128,80 +128,88 @@ int main() {
 <p style="color: #800080;"> Feedback </p>
 
 </h2>
- <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        form {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: auto;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        input, textarea, button {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-   		.comments-section {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .comment {
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-        }
-        .comment:last-child {
-            border-bottom: none;
-        }
-        .comment-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .comment-text {
-            margin: 0;
-        }
-    </style>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+  }
+  form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: auto;
+  }
+  label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+  }
+  input, select, textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  button {
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  button:hover {
+      background-color: #0056b3;
+  }
+  .questions-container {
+      margin-top: 20px;
+  }
+  .comments-section {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .comment {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+  }
+  .comment:last-child {
+      border-bottom: none;
+  }
+  .comment-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  .comment-text {
+      margin: 0;
+  }
+</style>
 </head>
 <body>
-    <form id="commentForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        
-        <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments" required></textarea>
-        
-        <button type="submit">Submit</button>
-    </form>
-       <div class="comments-section"               id="commentsSection">
-         <h2>
-<p style="color: #800080;"> Comments Section </p>
-		</h2>
-    </div>
-	<script src="script.js"></script>
- </body>
+<form id="feedbackForm">
+  <label for="userStatus">Select your status:</label>
+  <select id="userStatus" name="userStatus" required>
+      <option value="">-- Select an option --</option>
+      <option value="Student">Student</option>
+      <option value="Bachelor">Bachelor</option>
+  </select>
+
+  <div class="questions-container" id="questionsContainer">
+      <!-- Questions will be dynamically added here -->
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div class="comments-section" id="commentsSection">
+  <h2>Comments Section</h2>
+</div>
+
+<script src="script.js"></script>
+</body>
 <html/>
