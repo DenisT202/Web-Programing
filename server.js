@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+
 const surveys = [
   {
     "id": 1,
@@ -48,11 +49,26 @@ const questions = [
     "options": []
   }
 ];
+
 const cors = require('cors');
 app.use(cors());
+
+// Ruta principal con enlaces a surveys y questions
+app.get('/', (req, res) => {
+  const htmlResponse = `
+    <h1>Welcome to the Backend</h1>
+    <p>Available resources:</p>
+    <ul>
+      <li><a href="/surveys"> View Surveys</a></li>
+      <li><a href="/questions"> View Questions</a></li>
+    </ul>
+  `;
+  res.send(htmlResponse);
+});
 app.get('/surveys', (req, res) => {
   res.json(surveys);
 });
+
 app.get('/surveys/:id', (req, res) => {
   const survey = surveys.find(s => s.id == req.params.id);
   survey ? res.json(survey) : res.status(404).send("Survey not found");
@@ -61,12 +77,10 @@ app.get('/surveys/:id', (req, res) => {
 app.get('/questions', (req, res) => {
   res.json(questions);
 });
+
 app.get('/questions/:id', (req, res) => {
   const question = questions.find(q => q.id == req.params.id);
   question ? res.json(question) : res.status(404).send("Question not found");
-});
-app.get('/', (req, res) => {
-  res.send('Welcomo to the Backend');
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
