@@ -8,7 +8,7 @@ document.getElementById('userStatus').addEventListener('change', function () {
 });
 function fetchSurveyQuestions(status) {
     const surveyId = status === "Student" ? 1 : 2;
-    const surveyUrl = `https://my-json-server.typicode.com/depth0/survey1/surveys/${surveyId}`;
+    const surveyUrl = `http://localhost:3000/surveys/${surveyId}`;
 
     fetch(surveyUrl)
         .then(response => {
@@ -22,7 +22,7 @@ function fetchSurveyQuestions(status) {
             const questionContainer = document.getElementById('questionsContainer');
             questionContainer.innerHTML = '';
             const questionPromises = survey.qs.map(qId => {
-                return fetch(`https://my-json-server.typicode.com/depth0/survey1/questions/${qId}`)
+                return fetch(`http://localhost:3000/questions/${qId}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error(`Error ${response.status}: ${response.statusText}`);
@@ -119,3 +119,4 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
 
     alert('Your comment and answers have been submitted!');
 });
+
