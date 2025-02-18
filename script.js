@@ -76,10 +76,11 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     event.preventDefault();
 
     const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
     const status = document.getElementById('userStatus').value.trim();
     const comments = document.getElementById('comments').value.trim();
 
-    if (!name || !status || !comments) {
+    if (!name || !email|| !status || !comments) {
         alert('Please complete all the fields before submitting!');
         return;
     }
@@ -92,7 +93,8 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     commentElement.classList.add('comment');
 
     let commentContent = `
-        <p class="comment-name"><strong>${name}</strong> (Status: ${status})</p>
+        <p class="comment-name"><strong>${name}</strong> (${status})</p>
+        <p><strong>Email:</strong> ${email}</p>
         <p><strong>Comment:</strong> ${comments}</p>
         <p><strong>Answered Questions:</strong></p>
         <ul>
@@ -119,4 +121,3 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
 
     alert('Your comment and answers have been submitted!');
 });
-
