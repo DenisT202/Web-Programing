@@ -1,56 +1,122 @@
 <!DOCTYPE html>
 <html>
-<title > C Language</title>
-<h2>
-  <p style="color: #800080;"> Background </p>
-</h2>
+<head>
+  <title>C Language</title>
+  <style>
+    h2 {
+      text-align: center; 
+      color: #800080; 
+    }
 
-<p>I learned to program in C as a second programming language at university, I was able to create projects 
-like a game in C which helped me to better understand how this programming language works.<p>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #007ba7;
+    }
 
-<h2>
-  <p style="color: #800080;"> Features </p>
-</h2>
-We can choose the C language for many reasons:
-<ul>
-<li>It does not require a lot of resources</li>
-<li>Data structure the unions of the C language are complex</li>
-<li>Has access to the memory by using pointers</li>
-</ul>
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
 
-<h2><p style="color: #800080;"> Comparison </p> </h2>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
 
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: auto;
+    }
 
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
 
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  background-color: #007ba7;
-}
+    input, select, textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+    button {
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
+    button:hover {
+      background-color: #0056b3;
+    }
 
-</style>
+    .questions-container {
+      margin-top: 20px;
+    }
+
+    .comments-section {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .comment:last-child {
+      border-bottom: none;
+    }
+
+    .comment-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .comment-text {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
+  <h2>C Language</h2>
+  <h2>Background</h2>
+  <p>I learned to program in C as a second programming language at university, I was able to create projects like a game in C which helped me to better understand how this programming language works.</p>
 
+  <h2>Features</h2>
+  <p>We can choose the C language for many reasons:</p>
+  <ul>
+    <li>It does not require a lot of resources</li>
+    <li>Data structure the unions of the C language are complex</li>
+    <li>Has access to the memory by using pointers</li>
+  </ul>
 
-<table>
-  <tr>
-    <th>Pros</th>
-    <th>Efficient Memory Usage and Speed</th>
-    <th>Extra Comments</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td><pre>#include <stdio.h>
+  <h2>Comparison</h2>
+  <table>
+    <tr>
+      <th>Pros</th>
+      <th>Efficient Memory Usage and Speed</th>
+      <th>Extra Comments</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <pre>#include <stdio.h>
 
 int main() {
     int numbers[] = {1, 2, 3, 4, 5};
@@ -64,16 +130,19 @@ int main() {
 
     printf("The sum of the numbers is: %d\n", sum);
     return 0;
-}</pre></td>
-    <td><img src="Cimagen.png" alt=" C pros " width="550" height="450"></td>
-  </tr>
-  <tr>
-    <td>Cons</td>
-    <th>Memory Leak</th>
-    <th>Extra Comments</th>
+}</pre>
+      </td>
+      <td><img src="Cimagen.png" alt="C pros" width="550" height="450"></td>
+    </tr>
     <tr>
-    <td>  </td>
-      <td><pre> #include <stdio.h>
+      <td>Cons</td>
+      <th>Memory Leak</th>
+      <th>Extra Comments</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <pre>#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -101,117 +170,44 @@ int main() {
     // free(numbers); // This line is missing, causing a memory leak
 
     return 0;
-}</pre></td>
-    <td> <img src="Cimagen.png" alt=" C cons " width="550" height="450"> </td>
-   
-  </tr>
+}</pre>
+      </td>
+      <td><img src="Cimagen.png" alt="C cons" width="550" height="450"></td>
+    </tr>
   </table>
 
+  <h2>Conclusion</h2>
+  <p>C programming is a versatile and powerful language with a rich history and enduring popularity.</p>
 
-<h2>
-  <p style="color: #800080;"> Conclusion </p>
-</h2>
-<p> C programming is a versatile and powerful language with a rich history and enduring popularity. </p>
+  <h2>Links</h2>
+  <ol>
+    <li>Pros C <a href="https://www.crehana.com/blog/transformacion-digital/ventajas-desventajas-lenguaje/">Advantage</a></li>
+    <li>Cons C <a href="https://desarrolloweb.com/faq/sobre-mostrar-codigo-fuente">Disadvantage</a></li>
+    <li>Conclusion C <a href="https://codeahoy.com">Resume</a></li>
+  </ol>
 
-<h2><p style="color: #800080;"> Links </p></h2>
-
-<ol>
-  <li> Pros C   <a href="https://www.crehana.com/blog/transformacion-digital/ventajas-desventajas-lenguaje/">Advantage</a>
-  
-  <li> Cons C   <a href="https://desarrolloweb.com/faq/sobre-mostrar-codigo-fuente">Disadvantage</a>
-  
-  <li>Conclusion C   <a href="https://codeahoy.com">Resume</a>
-  
-</ol>
-
-<h2>
-<p style="color: #800080;"> Feedback </p>
-
-</h2>
-<style>
-  body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f5f5f5;
-  }
-  form {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      margin: auto;
-  }
-  label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-  }
-  input, select, textarea, button {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-  }
-  button {
-      background-color: #007BFF;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-  }
-  button:hover {
-      background-color: #0056b3;
-  }
-  .questions-container {
-      margin-top: 20px;
-  }
-  .comments-section {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .comment {
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-  }
-  .comment:last-child {
-      border-bottom: none;
-  }
-  .comment-name {
-      font-weight: bold;
-      margin-bottom: 5px;
-  }
-  .comment-text {
-      margin: 0;
-  }
-</style>
-</head>
-<body>
-<form id="feedbackForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" placeholder="Enter your name" required>
-  <label for="userStatus">Select your status:</label>
-  <select id="userStatus" name="userStatus" required>
+  <h2>Feedback</h2>
+  <form id="feedbackForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+    <label for="userStatus">Select your status:</label>
+    <select id="userStatus" name="userStatus" required>
       <option value="">-- Select an option --</option>
       <option value="Student">Student</option>
       <option value="Bachelor">Bachelor</option>
-  </select>
-  <div class="questions-container" id="questionsContainer">
+    </select>
+    <div class="questions-container" id="questionsContainer"></div>
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="comments-section" id="commentsSection">
+    <h2>Comments Section</h2>
   </div>
-  <label for="comments">Comments:</label>
-  <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments" required></textarea>
-  
-  <button type="submit">Submit</button>
-</form>
 
-<div class="comments-section" id="commentsSection">
-  <h2>Comments Section</h2>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-<html/>
+</html>
